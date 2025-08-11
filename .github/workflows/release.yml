@@ -30,6 +30,10 @@ jobs:
         run: |
           repos=$(find charts -name 'Chart.yaml' -exec yq e '.dependencies[].repository' {} \; | sort -u)
           for repo in $repos; do
+            if [[ "$repo" == oci://* ]]; then
+              echo "Skipping OCI registry: $repo"
+              continue
+            fi
             name=$(basename "$repo" | tr -cd '[:alnum:]-')
             echo "Adding repo: $name -> $repo"
             helm repo add "$name" "$repo"
