@@ -11,11 +11,11 @@ keywords:
 
 dependencies:
   - name: litellm-helm
-    version: "*"
+    version: "0.1.0"
     repository: oci://ghcr.io/berriai
     alias: litellm
     condition: litellm.enabled
 
   - name: "common"
-    version: "*"
+    version: "1.10.0"
     repository: oci://registry-1.docker.io/bitnamicharts
