@@ -1,10 +1,10 @@
 apiVersion: v2
 
 name: litellm
-description: A description of litellm Helm chart. Updated for workflow testing.
+description: A description of litellm Helm chart. Updated for workflow testing - final test.
 type: application
-version: 0.0.4
-appVersion: v0.0.4
+version: 0.0.5
+appVersion: v0.0.5
 
 keywords:
   - proxy
