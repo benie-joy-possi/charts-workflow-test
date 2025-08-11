@@ -10,7 +10,6 @@ on:
 
 jobs:
   release:
-    # depending on the runner configuration at your org
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -30,6 +29,15 @@ jobs:
         uses: azure/setup-helm@v3
         with:
           version: v3.12.1
+
+      - name: Install yq
+        uses: mikefarah/yq@v4.44.1
+
+      - name: Setup Helm repositories
+        run: ./scripts/setup-helm-repos.sh
+
+      - name: Update chart dependencies
+        run: ./scripts/update-chart-dependencies.sh
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0

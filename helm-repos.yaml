@@ -1,0 +1,17 @@
+repositories:
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+  - name: openwebui
+    url: https://helm.openwebui.com
+  - name: apache-tika
+    url: https://apache.jfrog.io/artifactory/tika
+  - name: chromadb
+    url: https://amikos-tech.github.io/chromadb-chart/
+  - name: litellm
+    url: oci://ghcr.io/berriai
+  - name: envoyproxy
+    url: oci://docker.io/envoyproxy
+  - name: bitnamicharts
+    url: oci://registry-1.docker.io/bitnamicharts
+  - name: common
+    url: oci://ghcr.io/berriai/common
