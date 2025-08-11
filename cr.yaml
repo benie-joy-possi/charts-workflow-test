@@ -1,6 +1,3 @@
-# Chart-releaser configuration
+# Minimal chart-releaser configuration
 owners:
-  - berriai
-git-base-url: https://api.github.com/
-git-upload-url: https://uploads.github.com/
-pages-branch: gh-pages
+  - benie-joy-possi
