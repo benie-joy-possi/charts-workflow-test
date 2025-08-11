@@ -1,7 +1,7 @@
 apiVersion: v2
 
 name: litellm
-description: A description
+description: A description of litellm Helm chart.
 type: application
 version: 0.0.1
 appVersion: v0.0.1
@@ -15,7 +15,7 @@ dependencies:
     repository: oci://ghcr.io/berriai
     alias: litellm
     condition: litellm.enabled
-    
+
   - name: "common"
     version: "*"
     repository: oci://registry-1.docker.io/bitnamicharts
